@@ -1,1 +1,1 @@
-print('Hello Backend')
+# Python backend entry point

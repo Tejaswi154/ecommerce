@@ -1,1 +1,1 @@
-console.log('Hello Frontend');
+// React frontend entry point
