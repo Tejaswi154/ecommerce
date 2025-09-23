@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Use Maven + JDK image to build
 FROM maven:3.9.4-eclipse-temurin-17 AS build
 
@@ -27,3 +28,12 @@ EXPOSE 8080
 
 # Run the application
 CMD ["java", "-jar", "app.jar"]
+=======
+FROM openjdk:17-jdk-alpine
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN ./mvnw clean package -DskipTests
+EXPOSE 8080
+CMD [\"java\", \"-jar\", \"target/backend-0.0.1-SNAPSHOT.jar\"]
+>>>>>>> e2ffc23c4da067270d27904b08ff199e4075ba26
